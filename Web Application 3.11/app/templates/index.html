@@ -1,0 +1,15 @@
+{% extends  "base.html" %}
+
+{% block content %}
+    <h1 onmouseover="start()">{{ title }}</h1>
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.username.label }}<br>
+        {{ form.username(size=10) }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+{% endblock %}
