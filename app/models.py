@@ -30,7 +30,7 @@ class Grades(db.Model):
     grade_name = db.Column(db.String(3), index=True, unique=True)
 
     def __repr__(self):
-        return f'Класс {self.subject_name}'
+        return f'Класс {self.grade_name}'
 
 
 class Curriculum(db.Model):
@@ -40,5 +40,3 @@ class Curriculum(db.Model):
     les_number = db.Column(db.Integer)
     les_day = db.Column(db.Integer)
 
-    def __repr__(self):
-        return f'Урок {self.subject_name}'
